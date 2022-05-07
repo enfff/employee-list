@@ -1,8 +1,16 @@
 # employer-list
 Useless WebApp developed just for practice
 
+## Installation
+
+1. `git clone https://github.com/enfff/employer-list/`
+2. `cd employer-list`
+3. `npm install`
+4. `npm start`
+
 ## Todos
 
-- Setup routes
-- Create simple webpages for those routes
-- Create a 404 webpage
+- [x] routes
+- [ ] ui-development
+- [ ] display
+- [ ] database
