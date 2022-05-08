@@ -14,3 +14,10 @@ Useless WebApp developed just for practice
 - [ ] ui-development
 - [ ] display
 - [ ] database
+
+## Things that requires polishing
+- [ ] Create a component for showing fetching data
+- [ ] Fetching data fetches data twice if you reload the `/home` page
+- [ ] Add a generic user
+- [ ] database
+- [ ] database

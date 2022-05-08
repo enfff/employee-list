@@ -1,7 +1,6 @@
 import { Card, Row, Container } from "react-bootstrap";
 
 const UserList = ({users}) => {
-    console.log(users);
     
     return (
 
@@ -9,11 +8,11 @@ const UserList = ({users}) => {
             <Row className="justify-content-center p-5" xs={12}>
                 {users.map(user => {
                     return(
-                        <Card key={user.id} style={{ width: '18rem', margin: '1%' }}>
+                        <Card key={user.id} style={{ width: '20rem', margin: '10px' }}>
                             <Card.Img variant="top" src="holder.js/100px180" />
                             <Card.Body>
                                 <Card.Title>{user.id}</Card.Title>
-                                <Card.Text>{user.company.name}</Card.Text>
+                                <h5>{user.company.name}</h5>
                                 <Card.Text>{user.company.catchPhrase}</Card.Text>
                             </Card.Body>
                         </Card>

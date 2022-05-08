@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Navbar, Nav, Container} from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
