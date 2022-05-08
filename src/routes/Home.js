@@ -1,4 +1,3 @@
-import { useState } from "react";
 import useFetch from "../scripts/useFetch";
 import UserList from "./UserList";
 
