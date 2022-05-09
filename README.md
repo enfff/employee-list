@@ -19,5 +19,4 @@ Useless WebApp developed just for practice
 - [ ] Create a component for showing fetching data
 - [ ] Fetching data fetches data twice if you reload the `/home` page
 - [ ] Add a generic user icon
-- [ ] database
-- [ ] database
+- [ ] Find out why local icons aren't loading
