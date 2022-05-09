@@ -18,6 +18,6 @@ Useless WebApp developed just for practice
 ## Things that requires polishing
 - [ ] Create a component for showing fetching data
 - [ ] Fetching data fetches data twice if you reload the `/home` page
-- [ ] Add a generic user
+- [ ] Add a generic user icon
 - [ ] database
 - [ ] database

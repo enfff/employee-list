@@ -1,9 +1,8 @@
 import { Card, Row, Container } from "react-bootstrap";
 
 const UserList = ({users}) => {
-    
-    return (
 
+    return (
         <Container>
             <Row className="justify-content-center p-5" xs={12}>
                 {users.map(user => {

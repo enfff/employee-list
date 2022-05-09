@@ -1,16 +1,17 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Navbar, Nav, Container} from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import AddUser from './routes/AddUser';
 import Home from './routes/Home';
 import NotFound from './routes/NotFound';
+import AppNavbar from './components/AppNavbar'
 
 function App() {
   return (
     <Router>
         <div className="App">
+        <AppNavbar />
           <div className="content">
             <Routes>
               <Route exact path='/' element={<Home/>}></Route>
