@@ -1,4 +1,4 @@
-# employer-list
+# employee-list
 Useless WebApp developed just for practice
 
 ## Installation

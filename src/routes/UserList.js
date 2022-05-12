@@ -1,6 +1,6 @@
 import { Card, Row, Container } from "react-bootstrap";
 
-const UserList = ({users}) => {
+const UserList = ( {users} ) => {
 
     return (
         <Container>

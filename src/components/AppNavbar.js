@@ -3,6 +3,8 @@ import { LinkContainer } from 'react-router-bootstrap'
 
 const AppNavbar = () => {
 
+    const githubIcon = '/icons/github.svg';
+
     return (
         <Navbar bg="light" expand="lg" sticky="top">
             <Container className="me-auto">
@@ -21,7 +23,7 @@ const AppNavbar = () => {
                 <Navbar.Brand className="d-flex" href="https://github.com/enfff">
                     <img
                         alt=""
-                        scr="/icons/github.svg"
+                        scr={githubIcon}
                         width="30"
                         height="30"
                         className="d-inline-block align-top"

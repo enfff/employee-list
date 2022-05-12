@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import AddUser from './routes/AddUser';
 import Home from './routes/Home';
+import Map from './routes/Map';
 import NotFound from './routes/NotFound';
 import AppNavbar from './components/AppNavbar'
 
@@ -14,9 +15,10 @@ function App() {
         <AppNavbar />
           <div className="content">
             <Routes>
-              <Route exact path='/' element={<Home/>}></Route>
-              <Route exact path='/add-user' element={<AddUser/>}></Route>
-              <Route path='/*' element={<NotFound/>}></Route>
+              <Route exact path='/' element={<Home/>} />
+              <Route exact path='/add-user' element={<AddUser/>} />
+              <Route exact path='/map' element={<Map/>} />
+              <Route path='/*' element={<NotFound/>} />
             </Routes>
         </div>
       </div>
