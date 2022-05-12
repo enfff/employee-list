@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 import "../misc/map.css"
 
 import useFetch from '../scripts/useFetch';
-// import Markers from '../components/Markers';
+import Markers from '../components/Markers';
 
 const Map = () => {
 
@@ -18,7 +18,7 @@ const Map = () => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
             
-                {/* <div>{!isPending && !error && users && <Markers users={users} />}</div> */}
+                <div>{!isPending && !error && users && <Markers users={users} />}</div>
 
                 
             </MapContainer>
