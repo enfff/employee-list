@@ -1,9 +1,9 @@
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, Image } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
 
-const AppNavbar = () => {
+import githubIcon from "../misc/github.svg"
 
-    const githubIcon = '/icons/github.svg';
+const AppNavbar = () => {
 
     return (
         <Navbar bg="light" expand="lg" sticky="top">
@@ -21,9 +21,9 @@ const AppNavbar = () => {
                     </LinkContainer>
                 </Navbar.Collapse>
                 <Navbar.Brand className="d-flex" href="https://github.com/enfff">
-                    <img
+                    <Image
                         alt=""
-                        scr={githubIcon}
+                        src={githubIcon}
                         width="30"
                         height="30"
                         className="d-inline-block align-top"
