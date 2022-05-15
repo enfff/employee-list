@@ -5,7 +5,7 @@ import Image from "react-bootstrap/Image"
 
 import { useState } from "react"
 
-import usericon from "../misc/usericon.png"
+import usericon from "../Assets/usericon.png"
 
 const UserCard = ({ user }) => {
 

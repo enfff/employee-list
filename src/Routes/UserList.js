@@ -1,5 +1,5 @@
 import { Row, Container,  } from "react-bootstrap"
-import UserCard from "../components/UserCard"
+import UserCard from "../Components/UserCard"
 
 const UserList = ( {users} ) => {
 

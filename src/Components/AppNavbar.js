@@ -1,7 +1,7 @@
 import { Navbar, Nav, Container, Image } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
 
-import githubIcon from "../misc/github.svg"
+import githubIcon from "../Assets/github.svg"
 
 const AppNavbar = () => {
 

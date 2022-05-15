@@ -1,9 +1,9 @@
-import { MapContainer, TileLayer, Marker } from 'react-leaflet'
+import { MapContainer, TileLayer } from 'react-leaflet'
 
-import "../misc/map.css"
+import "../Components/map.css"
 
-import useFetch from '../scripts/useFetch';
-import Markers from '../components/Markers';
+import useFetch from '../Helpers/useFetch';
+import Markers from '../Components/Markers';
 
 const Map = () => {
 

@@ -1,4 +1,4 @@
-import useFetch from "../scripts/useFetch";
+import useFetch from "../Helpers/useFetch";
 import UserList from "./UserList";
 
 const Home = () => {

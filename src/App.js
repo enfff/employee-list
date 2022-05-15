@@ -2,11 +2,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import AddUser from './routes/AddUser';
-import Home from './routes/Home';
-import Map from './routes/Map';
-import NotFound from './routes/NotFound';
-import AppNavbar from './components/AppNavbar'
+import AddUser from './Routes/AddUser';
+import Home from './Routes/Home';
+import Map from './Routes/Map';
+import NotFound from './Routes/NotFound';
+import AppNavbar from './Components/AppNavbar'
 
 function App() {
   return (
