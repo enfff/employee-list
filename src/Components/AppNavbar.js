@@ -6,7 +6,7 @@ import githubIcon from "../Assets/github.svg"
 const AppNavbar = () => {
 
     return (
-        <Navbar bg="light" expand="lg" sticky="top">
+        <Navbar bg="light" expand="lg" sticky="top" collapseOnSelect={true}>
             <Container className="me-auto">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
