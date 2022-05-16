@@ -1,99 +1,86 @@
-import { Col, Container, InputGroup, Button, Form } from "react-bootstrap";
-import { useState } from "react";
+import React from "react";
+// import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import { Container, Row, Col, Form } from "react-bootstrap"
+
+// const LoginSchema = Yup.object().shape({
+//     name: Yup.string()
+//         .min(2, "At least two characters needed")
+//         .required("Name is required"),
+//     company: Yup.string()
+//         .min(2, "At least two characters needed")
+//         .required("Name is required"),
+//     bio: Yup.string()
+//         .required("Name is required"),
+//     lat: Yup.number()
+//         .moreThan(-90)
+//         .lessThan(+90)
+//         .required("Name is required"),
+//     lng: Yup.number()
+//         .moreThan(-180)
+//         .moreThan(+180, "It needs")
+//         .required("Name is required"),
+// });
 
 const AddUser = () => {
-
-    const [validated, setValidated] = useState(false)
-
-    const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-
-        setValidated(true);
-    };
-
     return (
-        <Container className="justify-content-center mt-5">
-            <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                <Form.Group as={Col} controlId="validationName">
-                    <Form.Label>Name</Form.Label>
+        <Container>
+            <Form>
+                <Form.Group controlId="formName">
+                    <Form.Label className="m-2">Name</Form.Label>
                     <Form.Control
-                        required
                         type="text"
-                        placeholder="Thomas Milton"
+                        name="name"
+                        placeholder="Melon Musk"
                     />
-                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                    <Form.Control.Feedback type="invalid">
-                        Please choose a name.
-                    </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group as={Col} controlId="validationBio">
-                    <Form.Label>Bio</Form.Label>
+
+                <Form.Group controlId="formBio">
+                    <Form.Label className="m-2">Bio</Form.Label>
                     <Form.Control
-                        required
                         as="textarea"
                         type="text"
-                        placeholder="23yo Designer from San Francisco"
+                        name="bio"
+                        placeholder="Spent most of my youth underground, hoping I would florish someday - and now there I am, shining proudly under the sun"
                     />
-                    <Form.Control.Feedback type="invalid">
-                        Please write a bio.
-                    </Form.Control.Feedback>
-                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group as={Col} controlId="validationCompany">
-                    <Form.Label>Company</Form.Label>
-                    <InputGroup hasValidation>
-                        <Form.Control
-                            type="text"
-                            placeholder="Don't be evil"
-                            aria-describedby="inputGroupPrepend"
-                            required
-                        />
-                        <Form.Control.Feedback type="invalid">
-                            Please choose a company.
-                        </Form.Control.Feedback>
-                    </InputGroup>
+
+                <Form.Group controlId="formCompany">
+                    <Form.Label className="m-2">Name</Form.Label>
+                    <Form.Control
+                        type="text"
+                        name="Company"
+                        placeholder="SpaceX"
+                    />
                 </Form.Group>
-                <Form.Group as={Col} controlId="validationLat">
-                    <Form.Label>Latitude</Form.Label>
-                    <InputGroup hasValidation>
-                        <InputGroup.Text id="inputGroupPrepend">lat</InputGroup.Text>
-                        <Form.Control
-                            type="number"
-                            placeholder="1.234567"
-                            step="0.000001"
-                            min="-90"
-                            max="90"
-                            aria-describedby="inputGroupPrepend"
-                            required
-                        />
-                        <Form.Control.Feedback type="invalid">
-                            Please choose a geo location.
-                        </Form.Control.Feedback>
-                    </InputGroup>
+
+                <Form.Group controlId="formGeo">
+                    <Row>
+                        <Col xs="12" lg="6" className="mt-2">
+                            <Form.Label className="m-2">Latitude</Form.Label>
+                            <Form.Control
+                                type="number"
+                                placeholder="-25.716667"
+                                step="0.00001"
+                                min="-90"
+                                max="90"
+                            />
+                        </Col>
+                        <Col xs="12" lg="6" className="mt-2">
+                            <Form.Label className="m-2">Longitude</Form.Label>
+                            <Form.Control
+                                type="number"
+                                placeholder="28.283333"
+                                step="0.00001"
+                                min="-180"
+                                max="180"
+                            />
+                        </Col>
+                    </Row>
                 </Form.Group>
-                <Form.Group as={Col} controlId="validationLng">
-                    <Form.Label>Longitude</Form.Label>
-                    <InputGroup hasValidation>
-                        <InputGroup.Text id="inputGroupPrepend">lng</InputGroup.Text>
-                        <Form.Control
-                            type="number"
-                            placeholder="1.234567"
-                            step="0.000001"
-                            min="-180"
-                            max="180"
-                            aria-describedby="inputGroupPrepend"
-                            required
-                        />
-                        <Form.Control.Feedback type="invalid">
-                            Please choose a geo location.
-                        </Form.Control.Feedback>
-                    </InputGroup>
-                </Form.Group>
-                <Button block="true" type="submit" className="mt-5">Submit form</Button>
+
+
+
             </Form>
         </Container>
     );
