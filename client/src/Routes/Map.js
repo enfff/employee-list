@@ -12,7 +12,15 @@ const Map = () => {
     return (
         <div className="map">
 
-            <MapContainer center={[41.8933203, 12.4829321]} zoom={12} scrollWheelZoom={true}>
+            <MapContainer
+                center={[41.8933203, 12.4829321]}
+                zoom="6"
+                scrollWheelZoom={true}
+                zoomControl={false}
+                doubleClickZoom={false}
+                maxZoom="15"
+                minZoom="3"
+            >
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
