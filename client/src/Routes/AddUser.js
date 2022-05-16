@@ -43,7 +43,7 @@ const AddUser = () => {
                     </Form.Control.Feedback>
                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group as={Col} controlId="validationCustomUsername">
+                <Form.Group as={Col} controlId="validationCompanyCatchphrase">
                     <Form.Label>Company Catchphrase</Form.Label>
                     <InputGroup hasValidation>
                         <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
