@@ -49,7 +49,7 @@ const AddUser = () => {
                         <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
                         <Form.Control
                             type="text"
-                            placeholder="Don't be evil."
+                            placeholder="Don't be evil"
                             aria-describedby="inputGroupPrepend"
                             required
                         />
