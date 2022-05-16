@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const AddUser = () => {
 
-    const [validated, setValidated] = useState(false);
+    const [validated, setValidated] = useState(false)
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
@@ -49,7 +49,7 @@ const AddUser = () => {
                         <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
                         <Form.Control
                             type="text"
-                            placeholder="Company Catchphrase"
+                            placeholder="Don't be evil."
                             aria-describedby="inputGroupPrepend"
                             required
                         />
