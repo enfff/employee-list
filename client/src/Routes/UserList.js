@@ -7,8 +7,9 @@ const UserList = ( {users} ) => {
         <Container>
             <Row className="justify-content-center p-5" xs={12}>
                 {users.map(user => {
+                    console.log(user)
                     return(
-                        <UserCard key={user.id} user={user}/>
+                        <UserCard key={user._id} user={user}/>
                     )
                 })}
             </Row>

@@ -7,7 +7,7 @@ import Markers from '../Components/Markers';
 
 const Map = () => {
 
-    const { data: users, isPending, error } = useFetch('https://jsonplaceholder.typicode.com/users/');
+    const { data: users, isPending, error } = useFetch('http://localhost:3005/users/');
 
     return (
         <div className="map">
