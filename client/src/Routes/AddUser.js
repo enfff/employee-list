@@ -43,10 +43,9 @@ const AddUser = () => {
                     </Form.Control.Feedback>
                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group as={Col} controlId="validationCompanyCatchphrase">
-                    <Form.Label>Company Catchphrase</Form.Label>
+                <Form.Group as={Col} controlId="validationCompany">
+                    <Form.Label>Company</Form.Label>
                     <InputGroup hasValidation>
-                        <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
                         <Form.Control
                             type="text"
                             placeholder="Don't be evil"
@@ -54,11 +53,46 @@ const AddUser = () => {
                             required
                         />
                         <Form.Control.Feedback type="invalid">
-                            Please choose a company catchprase.
+                            Please choose a company.
                         </Form.Control.Feedback>
                     </InputGroup>
                 </Form.Group>
-                {/* </Row> */}
+                <Form.Group as={Col} controlId="validationLat">
+                    <Form.Label>Latitude</Form.Label>
+                    <InputGroup hasValidation>
+                        <InputGroup.Text id="inputGroupPrepend">lat</InputGroup.Text>
+                        <Form.Control
+                            type="number"
+                            placeholder="1.234567"
+                            step="0.000001"
+                            min="-90"
+                            max="90"
+                            aria-describedby="inputGroupPrepend"
+                            required
+                        />
+                        <Form.Control.Feedback type="invalid">
+                            Please choose a geo location.
+                        </Form.Control.Feedback>
+                    </InputGroup>
+                </Form.Group>
+                <Form.Group as={Col} controlId="validationLng">
+                    <Form.Label>Longitude</Form.Label>
+                    <InputGroup hasValidation>
+                        <InputGroup.Text id="inputGroupPrepend">lng</InputGroup.Text>
+                        <Form.Control
+                            type="number"
+                            placeholder="1.234567"
+                            step="0.000001"
+                            min="-180"
+                            max="180"
+                            aria-describedby="inputGroupPrepend"
+                            required
+                        />
+                        <Form.Control.Feedback type="invalid">
+                            Please choose a geo location.
+                        </Form.Control.Feedback>
+                    </InputGroup>
+                </Form.Group>
                 <Button block="true" type="submit" className="mt-5">Submit form</Button>
             </Form>
         </Container>
