@@ -17,7 +17,10 @@ Useless WebApp developed for deliberate practice using the [MERN Stack](https://
 
 2. `cd server`
 3. `npm install`
-4. `npm start`
+4. `echo "ATLAS_URI='mongodb+srv://<username>:<password>@theuseless-webapp.tcqqm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'" > .env`
+5. `echo PORT='3005' >> .env`
+
+You can request the `<username>` and `<password>` field by [contacting me](https://t.me/Enffff) (check my GitHub bio for more contact)
 
 ## Todos
 
