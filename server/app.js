@@ -45,7 +45,6 @@ app.get('/users', (req, res) => {
         // .limit(usersPerPage)
         .forEach(user => users.push(user))
         .then(() => {
-            console.log(users)
             res.status(200).json(users)
         })
         .catch(() => {
