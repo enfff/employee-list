@@ -30,7 +30,6 @@ You can request the `<username>` and `<password>` field by [contacting me](https
 
 ## Things that requires polishing
 - [ ] Create a component for showing fetching data
-- [ ] Fetching data fetches data twice if you reload the `/home` page
 - [ ] Show only a couple of users in the homepage (more can be requested with a proper button)
 - [x] Fix that error you get when you write a bio (/add-user) with less than 10 characters
-- [ ] Remove the tmp "/client/src/Routes/FormikForm.js"
+- [x] Remove the tmp "/client/src/Routes/FormikForm.js"
