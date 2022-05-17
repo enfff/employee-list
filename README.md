@@ -22,14 +22,14 @@ Future features might include updating users and authenticating into the app
 1. `git clone https://github.com/enfff/employees-list/ && cd employees-list`
 
 ### Client installation
-*Make sure you're on the root folder*
+*Make sure you're on the root folder, i.e. `employees-list`*
 
 2. `cd client`
 3. `npm install`
 4. `npm start`
 
 ### Server installation
-*Make sure you're on the root folder*
+*Make sure you're on the root folder i.e. `employees-list`*
 
 2. `cd server`
 3. `npm install`
