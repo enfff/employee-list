@@ -42,7 +42,7 @@ You can request the `<username>` and `<password>` field by [contacting me](https
 
 - [x] routes
 - [x] ui-development
-- [ ] database
+- [x] database
 
 ## Things that requires polishing
 - [ ] Create a component for showing fetching data
