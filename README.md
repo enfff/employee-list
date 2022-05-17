@@ -1,7 +1,11 @@
 # employees-list
 Useless WebApp developed for deliberate practice using the [MERN Stack](https://www.educative.io/edpresso/what-is-mern-stack)
 
+
 This app will let you add users in a database and show their location on a map. That's it.
+
+All users will have the same sad user icon due to space limitation in my database
+
 Most important libraries used:
 
 ``` json
