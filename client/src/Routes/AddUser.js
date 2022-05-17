@@ -6,13 +6,13 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap"
 const formSchema = Yup.object().shape({
     name: Yup.string()
         .min(2, "Must be longer than two characters")
-        .required("Name is required"),
+        .required("Required field"),
     company: Yup.string()
         .min(2, "Must be longer than two characters")
-        .required("Company is required"),
+        .required("Required field"),
     bio: Yup.string()
-        .min(10, "Come on type something")
-        .required("Bio is required"),
+        .min(10, "Come on, tell us something more about yourself")
+        .required("Required field"),
     lat: Yup.number()
         .moreThan(-90, 'Must be a number between -90 and +90')
         .lessThan(+90, 'Must be a number between -90 and +90')
@@ -75,7 +75,7 @@ const AddUser = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 isInvalid={touched.bio && errors.bio}
-                                valid={touched.bio && !errors.bio}
+                                isValid={touched.bio && !errors.bio}
                             />
                             <Form.Control.Feedback type="invalid">
                                 {errors.bio}
