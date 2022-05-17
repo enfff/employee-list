@@ -19,7 +19,7 @@ Future features might include updating users and authenticating into the app
 
 ## Installation
 
-1. `git clone https://github.com/enfff/employees-list/`
+1. `git clone https://github.com/enfff/employees-list/ && cd employees-list`
 
 ### Client installation
 *Make sure you're on the root folder*
