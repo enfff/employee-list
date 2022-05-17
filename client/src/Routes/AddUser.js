@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { Container, Row, Col, Form, Button } from "react-bootstrap"
+import { Container, Row, Col, Form, Button, Modal } from "react-bootstrap"
+
 
 const formSchema = Yup.object().shape({
     name: Yup.string()
@@ -23,11 +24,49 @@ const formSchema = Yup.object().shape({
         .required('Must be a number between -180 and +180'),
 });
 
+const fixJSON = ({ name, bio, lat, lng, company }) => {
+    // Quick and dirty fix for the the badly formatted values
+    const fixedJSON = {
+        name: name,
+        bio: bio,
+        company: company,
+        geo: [
+            lat,
+            lng
+        ]
+    }
+    return fixedJSON;
+}
+
+
 
 const AddUser = () => {
+
+    const [showModal, setShowModal] = useState(false);
+
     return (
         <Container>
             <Formik
+                onSubmit={(values, { setSubmitting, resetForm }) => {
+                    setSubmitting(true);
+
+                    const fixedJSON = fixJSON(values);
+
+                    fetch('http://localhost:3005/users', {
+                        method: 'POST',
+                        headers: {"Content-Type": "application/json"},
+                        body: JSON.stringify(fixedJSON)
+                    }).then(()=>{
+
+                        resetForm();
+                        setSubmitting(false);
+                        setShowModal(true);
+
+                    }).catch((err)=>{
+                        console.log(err)
+                    })
+
+                }}
                 validationSchema={formSchema}
                 initialValues={{
                     name: '',
@@ -45,7 +84,7 @@ const AddUser = () => {
                     handleSubmit,
                     handleBlur, // this handles the "touched" object
                 }) => (
-                    <Form noValidate onSubmit={handleSubmit}>
+                    <Form noValidate>
                         <Form.Group controlId="formName">
                             <Form.Label className="m-2">Name</Form.Label>
                             <Form.Control
@@ -152,7 +191,8 @@ const AddUser = () => {
                                 variant="primary"
                                 type="submit"
                                 as={Col}
-                                onClick={() => {
+                                onClick={(e) => {
+                                    handleSubmit(e)
                                     console.log({ values })
                                     console.log({ errors })
                                     console.log({ touched })
@@ -166,6 +206,21 @@ const AddUser = () => {
 
 
             </Formik>
+            <Modal
+                show={showModal}
+                onHide={() => setShowModal(false)}
+                centered
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="contained-modal-title-vcenter">
+                        User added successfully!
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Footer>
+                    <Button onClick={() => setShowModal(false)}>Close</Button>
+                </Modal.Footer>
+            </Modal>
+
         </Container>
     );
 }

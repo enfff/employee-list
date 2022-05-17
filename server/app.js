@@ -33,6 +33,8 @@ connectToDb((err) => {
 
 app.get('/users', (req, res) => {
     // fetches all users from database
+
+    // uncommenting will load a "page" of users
     // const page = req.query.p || 0
     // const usersPerPage = 3
 
@@ -49,5 +51,18 @@ app.get('/users', (req, res) => {
         })
         .catch(() => {
             res.status(500).json({ error: 'Could not fetch the documents' })
+        })
+})
+
+app.post('/users', (req, res) => {
+    const user = req.body
+
+    db.collection('users')
+        .insertOne(user)
+        .then(result => {
+            res.status(200).json(result);
+        })
+        .catch(err => {
+            res.status(500).json({ err: 'Could not post document' })
         })
 })
