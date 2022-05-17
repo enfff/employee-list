@@ -1,6 +1,22 @@
 # employees-list
 Useless WebApp developed for deliberate practice using the [MERN Stack](https://www.educative.io/edpresso/what-is-mern-stack)
 
+This app will let you add users in a database and show their location on a map. That's it.
+Most important libraries used:
+
+``` json
+    "formik": "^2.2.9",
+    "leaflet": "^1.8.0",
+    "react-bootstrap": "^2.3.1",
+    "react-leaflet": "^4.0.0",
+    "yup": "^0.32.11",
+    "mongoose": "^5.13.14",
+    "express": "^4.17.1",
+    "mongodb": "^3.7.3"
+```
+
+Future features might include updating users and authenticating into the app
+
 ## Installation
 
 1. `git clone https://github.com/enfff/employees-list/`
